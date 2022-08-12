@@ -7,7 +7,7 @@ export default function Login() {
 
     return <div className="w-screen overflow-x-hidden overflow-y-auto lg:overflow-y-hidden h-auto lg:h-screen block lg:grid grid-cols-2">
         <div className="w-full h-screen grid place-items-center bg-LivingRoom bg-cover bg-center lg:bg-none">
-            <div className="sm:w-80 md:w-96 lg:w-100 xl:w-110 bg-[#F6EFE9] py-20 px-10">
+            <div className="sm:w-80 md:w-96 lg:w-100 xl:w-110 2xl:w-128 bg-[#F6EFE9] py-20 px-10">
                 <div className="w-full h-auto">
                     <h1 className="text-center text-4xl font-JakartaSans font-semibold">
                         L Y F E
