@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Login() {
     const [isClicked, setClicked] = useState(false);
 
-    return <div className="w-screen overflow-x-hidden overflow-y-auto lg:overflow-y-hidden h-auto lg:h-screen block lg:grid grid-cols-2">
+    return (<div className="w-screen overflow-x-hidden overflow-y-auto lg:overflow-y-hidden h-auto lg:h-screen block lg:grid grid-cols-2">
         <div className="w-full h-screen grid place-items-center bg-LivingRoom bg-cover bg-center lg:bg-none">
             <div className="sm:w-80 md:w-96 lg:w-100 xl:w-110 2xl:w-128 bg-[#F6EFE9] py-20 px-10">
                 <div className="w-full h-auto">
@@ -59,5 +59,5 @@ export default function Login() {
         </div >
         <div className="w-full h-auto lg:h-screen bg-LivingRoom bg-cover bg-center hidden lg:block">
         </div>
-    </div >
+    </div >);
 }
