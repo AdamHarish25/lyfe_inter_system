@@ -24,6 +24,7 @@ module.exports = {
       },
       backgroundImage: {
         'LivingRoom': "url('./Attachments/Image/LivingRoom.png')",
+        'Lines': "url('./Attachments/Image/backgroundLines.png')",
       }
     },
     screens: {
