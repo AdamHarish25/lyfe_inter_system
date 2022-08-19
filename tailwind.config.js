@@ -13,6 +13,9 @@ module.exports = {
       JakartaSans: ["'Plus Jakarta Sans'", "sans-serif"],
     },
     extend: {
+      gridTemplateColumns: {
+        'SL': 'auto 1fr',
+      },
       spacing: {
         68: "17rem",
         100: "30rem",
