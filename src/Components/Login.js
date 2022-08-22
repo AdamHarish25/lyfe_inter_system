@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
-import { Link, Routes, Route, useLocation } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import AdminDashboard from "./AdminDashboard";
 import Icons from "./Icons";
 
-export default function Login({visibility}) {
+export default function Login({ visibility }) {
     const [isClicked, setClicked] = useState(false);
 
 
