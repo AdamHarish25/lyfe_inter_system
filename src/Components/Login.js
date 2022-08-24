@@ -36,11 +36,11 @@ export default function Login({ visibility }) {
                                 } className="border-none outline-none bg-transparent h-9 grow-[2]" />
                                 {!isClicked ? (
                                     <button title="Reveal Password" id="eye" className="p-2 rounded-full hover:bg-gray-500/[.15] transform duration-300" type={"button"} onClick={() => setClicked(!isClicked)}>
-                                        {Icons.eye}
+                                        {Icons.eye()}
                                     </button>
                                 ) : (
                                     <button title="Unreveal Password" id="eyeSlash" className="p-2 rounded-full hover:bg-gray-500/[.15] transform duration-300" type={"button"} onClick={() => setClicked(!isClicked)}>
-                                        {Icons.eye_slash}
+                                        {Icons.eye_slash()}
                                     </button>
                                 )
                                 }
