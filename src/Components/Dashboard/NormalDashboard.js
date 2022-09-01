@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import CircularBar from "../CircularBar"
 import EmployeeLists from "../EmployeeLists"
 import Icons from "../Icons"

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Carousel, { CarouselItem } from "../Carousel/Carousel";
 import CircularBar from "../CircularBar";
 import EmployeeLists from "../EmployeeLists";
