@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
-import AdminDashboard from "./AdminDashboard";
+import AdminDashboard from "./Dashboard/AdminDashboard";
 import Icons from "./Icons";
 
 export default function Login({ visibility }) {

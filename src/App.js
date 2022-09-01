@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import AdminDashboard from "./Components/AdminDashboard";
+import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 import Login from "./Components/Login";
 import ScreenWarn from "./Components/ScreenWarning";
 

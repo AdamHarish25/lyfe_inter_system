@@ -1,0 +1,22 @@
+.carousel {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+  
+  .left_button {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+  }
+
+  .right_button {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+  }
+  
