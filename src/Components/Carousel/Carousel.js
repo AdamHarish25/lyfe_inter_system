@@ -1,5 +1,5 @@
 /* eslint-disable eqeqeq */
-import { Children, cloneElement, useEffect, useState } from "react";
+import { Children, cloneElement, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Icons from "../Icons";
 import '../Styles';
