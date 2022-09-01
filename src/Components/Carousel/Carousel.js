@@ -4,7 +4,7 @@ import { useSwipeable } from "react-swipeable";
 import Icons from "../Icons";
 import '../Styles';
 
-export const CarouselItem = ({ children, className = "w-full h-full inline-grid" }) => {
+export const CarouselItem = ({ children, className = "w-full h-full" }) => {
     return (
         <div className={className}>
             {children}
