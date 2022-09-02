@@ -1,4 +1,4 @@
-import './Styles';
+import '../Styles';
 
 
 const CircularBar = ({
@@ -8,7 +8,7 @@ const CircularBar = ({
     trackColor = `#ddd`,
     indicatorWidth = 10,
     indicatorColor = `#07c`,
-    indicatorCap = `round`,
+    indicatorSharpness = `round`,
     label = `Loading...`,
     labelColor = `#333`,
     spinnerMode = false,
@@ -55,7 +55,7 @@ const CircularBar = ({
                         strokeWidth={indicatorWidth}
                         strokeDasharray={dashArray}
                         strokeDashoffset={dashOffset}
-                        strokeLinecap={indicatorCap}
+                        strokeLinecap={indicatorSharpness}
                     />
                 </svg>
 

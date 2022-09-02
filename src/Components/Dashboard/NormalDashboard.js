@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import CircularBar from "../CircularBar"
+import CircularBar from "../CircularBar/CircularBar"
 import EmployeeLists from "../EmployeeLists"
 import Icons from "../Icons"
 import Clock from "react-live-clock";
