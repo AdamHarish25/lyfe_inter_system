@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Icons from "../Icons";
+import Icons from "./Icons";
 
 
 export function DashSidebar() {

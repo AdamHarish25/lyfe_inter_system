@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Dashboard } from "./Dashboard/Dashboard";
-import { DashSidebar } from "./Dashboard/DashSidebar";
+import { DashSidebar } from "./Sidebar";
 
 
 
