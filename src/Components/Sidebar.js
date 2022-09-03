@@ -2,7 +2,7 @@
 import Icons from "./Icons";
 
 
-export function DashSidebar() {
+export function Sidebar() {
     return <div id="Sidebar" className="w-60 inset-y-0 p-3">
         <h1 className="text-center text-4xl font-JakartaSans font-medium tracking-wider my-10">
             L Y F E

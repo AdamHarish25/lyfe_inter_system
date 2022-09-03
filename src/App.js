@@ -7,8 +7,8 @@ function App() {
   return (
     <div id="App" className="h-auto w-auto overflow-x-hidden xl:overflow-x-auto">
       {/* <Login /> */}
-      <AdminDashboard visibility="hidden lg:grid" />
-      <ScreenWarn visibility="block lg:hidden" />
+      <AdminDashboard visibility="hidden slg:grid" />
+      <ScreenWarn visibility="block slg:hidden" />
     </div>
   );
 }
