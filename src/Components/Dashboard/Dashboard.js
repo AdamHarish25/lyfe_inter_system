@@ -4,8 +4,8 @@ import '../Styles';
 import { CarouselDashboard } from './CarouselDashboard';
 import { NormalDashboard } from './NormalDashboard';
 
-export function Dashboard() {
-    return <div id="Dashboard" className="w-full h-full bg-white rounded-2xl p-10 font-AzoSans">
+export const Dashboard = () => {
+    return <div id="Dashboard" className={`w-full h-full bg-white rounded-2xl p-10 font-AzoSans`}>
         <NormalDashboard visiblity="hidden xl:block" />
         <CarouselDashboard visiblity="block xl:hidden" />
     </div>

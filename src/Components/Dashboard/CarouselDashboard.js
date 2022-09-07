@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Carousel, { CarouselItem } from "../Carousel/Carousel";
 import CircularBar from "../CircularBar/CircularBar";
-import EmployeeLists from "../EmployeeLists";
+import AwardedEmployees from "../EmployeeLists/AwardedEmployees";
 import Icons from "../Icons";
 import Clock from "react-live-clock";
 
@@ -110,7 +110,7 @@ export function CarouselDashboard({ visiblity }) {
                                     <div className="w-full h-auto text-center font-semibold">
                                         Employee of the Year
                                     </div>
-                                    {(EmployeeLists.length > listsLimit) ? EmployeeLists.slice(listsLimit - 5, listsLimit).map((employee, index) => {
+                                    {(AwardedEmployees.length > listsLimit) ? AwardedEmployees.slice(listsLimit - 5, listsLimit).map((employee, index) => {
                                         return <ul className="list-none mt-5 w-full space-y-4">
                                             <li>
                                                 <div className="w-full h-auto flex items-center gap-5 xl:gap-0 text-sm 2xl:text-base justify-evenly xl:justify-around">
@@ -122,7 +122,7 @@ export function CarouselDashboard({ visiblity }) {
                                                 </div>
                                             </li>
                                         </ul>
-                                    }) : EmployeeLists.map((employee, index) => {
+                                    }) : AwardedEmployees.map((employee, index) => {
                                         return <ul className="list-none mt-5 w-full space-y-4">
                                             <li>
                                                 <div className="w-full h-auto flex items-center gap-5 xl:gap-0 text-sm 2xl:text-base justify-evenly xl:justify-around">

@@ -1,4 +1,4 @@
-const EmployeeLists = [
+const AwardedEmployees = [
     {
         name: "Sarah Kidman",
         picture: "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=441&q=80",
@@ -31,4 +31,4 @@ const EmployeeLists = [
     },
 ];
 
-export default EmployeeLists;
+export default AwardedEmployees;
