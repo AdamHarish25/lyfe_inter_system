@@ -15,12 +15,12 @@ export const SidebarData = [
         subNav: [
             {
                 title: 'List Employee',
-                path: '/Employees',
+                path: '/Employees/EmployeeLists',
                 Icon: Icons.files(),
             },
             {
                 title: 'Add Employee',
-                path: '/AddEmployee',
+                path: '/Employees/AddEmployee',
                 Icon: Icons.user(),
             }
         ],

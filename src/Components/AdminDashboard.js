@@ -2,7 +2,7 @@
 import { Dashboard } from "./Dashboard/Dashboard";
 import Sidebar from "./Sidebar/Sidebar";
 import { Route, Routes } from 'react-router-dom'
-import EmployeeLists from './EmployeeLists/Employees'
+import { EmployeeLists } from './EmployeeLists/Employees';
 
 
 
@@ -16,6 +16,9 @@ export default function AdminDashboard({ visibility }) {
             <Sidebar />
             <Routes>
                 <Route path="/" exact element={<Dashboard />} />
+                <Route path="/Employees" exact element={<EmployeeLists />} />
+                <Route path="/Employees/EmployeeLists" exact element={<EmployeeLists />} />
+                {/* <Route path="/Employees/AddEmployee" exact element={<Dashboard />} /> */}
             </Routes>
         </div>
     );
