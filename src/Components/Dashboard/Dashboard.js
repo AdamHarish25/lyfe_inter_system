@@ -5,7 +5,7 @@ import { CarouselDashboard } from './CarouselDashboard';
 import { NormalDashboard } from './NormalDashboard';
 
 export const Dashboard = () => {
-    return <div id="Dashboard" className={`w-full h-full bg-white rounded-2xl p-10 font-AzoSans`}>
+    return <div id="Dashboard" className="w-auto h-auto">
         <NormalDashboard visiblity="hidden xl:block" />
         <CarouselDashboard visiblity="block xl:hidden" />
     </div>

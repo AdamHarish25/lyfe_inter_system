@@ -11,7 +11,7 @@ const Sidebar = () => {
         </h1>
         <ul className='list-none space-y-5'>
             {SidebarData.map((item, index) => {
-                return <li key={index}><SidebarMenu item={item} key={index} /></li>
+                return <li key={index}><SidebarMenu item={item} key={index} index={index} /></li>
             })}
         </ul>
     </div>

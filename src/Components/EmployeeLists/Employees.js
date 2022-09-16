@@ -1,63 +1,42 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 import Icons from '../Icons';
+import Table from '../Table/table';
 import employeeDetails from './EmployeeData'
-import Employee from './EmployeeTemplate';
 
-export const EmployeeLists = ({ visibility, name, number }) => {
+export const EmployeeLists = ({ visibility, name, number, email, id, joinDate, status }) => {
 
     const [search, setSearch] = useState("");
 
     const [employee, setEmployee] = useState([]);
-    const [input, setInput] = useState({ name, number });
+    const [input, setInput] = useState({ name, number, email, id, joinDate, status });
     console.log("input", input);
 
     useEffect(() => {
         employeeDetails.allEmployee().then((response) => setEmployee(response.data));
     }, []);
 
-    const addemployee = (input) => {
-        employeeDetails.createemployee(input).then((response) => {
-            setInput((prev) => ({ name: "", number: "" }));
-            setEmployee((prev) => [...prev, response.data]);
-        });
-    };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const existingemployee = employee.find((_) => _.name === input.name);
-        if (existingemployee) {
-            if (
-                window.confirm(
-                    `${existingemployee.name} is already in the phonebook, replace the old number with a new one?`
-                )
-            ) {
-                employeeDetails.editEmployee(existingemployee.id, input).then((response) => {
-                    setEmployee((prev) => [
-                        ...prev.filter((_) => _.id !== response.id),
-                        response
-                    ]);
-                });
-            }
-        } else {
-            addemployee(input);
-        }
-    };
 
     const handleChange = (e) => {
-        setInput((prev) => ({
+        setInput((prev) => ([{
             ...input,
-            [e.target.name]: e.target.value
-        }));
+            [e.target.name || e.target.email || e.target.number || e.target.id || e.target.joinDate]: e.target.value,
+        }]));
     };
-    const filteredPeople = employee.filter((employee) => {
-        return employee.name.toLowerCase().includes(search.toLowerCase());
-    });
+
+    const filteredEmployees = employee.filter((employee) => {
+        return (
+            employee.name.toLowerCase().includes(search.toLowerCase()) ||
+            employee.email.toLowerCase().includes(search.toLowerCase()) ||
+            employee.number.toLowerCase().includes(search.toLowerCase()) ||
+            employee.joinDate.toLowerCase().includes(search.toLowerCase())
+        )
+    }); 
+
 
     return (
-        <div className='w-full h-full bg-white rounded-2xl p-10 font-AzoSans'>
-
+        <div className='w-auto h-auto'>
             <div className='w-auto h-auto space-x-10 flex'>
                 <div className="border-2 border-[#D9E1E7] px-4 rounded-xl flex justify-between items-center">
                     <input
@@ -76,41 +55,8 @@ export const EmployeeLists = ({ visibility, name, number }) => {
                     {Icons.downArrow("text-gray-700")}
                 </button>
             </div>
-            <h2>add a new</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    name:
-                    <input
-                        name="name"
-                        type="text"
-                        value={input.name}
-                        onChange={handleChange}
-                    />
-                    <br />
-                    number:
-                    <input
-                        name="number"
-                        type="text"
-                        value={input.number}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <button type="submit">add</button>
-                </div>
-            </form>
-            <h2>Numbers</h2>
-            <li>
-                {filteredPeople.map((employee) => (
-                    <Employee
-                        handleChange={handleChange}
-                        handleSubmit={handleSubmit}
-                        addemployee={addemployee}
-                        key={employee.number}
-                        employee={employee}
-                    />
-                ))}
-            </li>
-            <br />
+            <div className='max-w-4xl h-100 my-10 xl:max-w-6xl'>
+
+            </div>
         </div>)
 }

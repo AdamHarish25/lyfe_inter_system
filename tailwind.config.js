@@ -26,6 +26,7 @@ module.exports = {
         128: "45rem",
         256: "50rem",
         screenLg: "120vh",
+        screenXL: "150vh",
       },
       backgroundImage: {
         'LivingRoom': "url('./Attachments/Image/LivingRoom.png')",
