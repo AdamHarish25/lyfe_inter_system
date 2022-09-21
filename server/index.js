@@ -4,7 +4,7 @@ import cors from "cors";
 import EmployeeRoutes from "./routes/EmployeeRoutes.js";
 
 const app = express();
-mongoose.connect('mongodb://localhost:27017/Lyfe_inter', {
+mongoose.connect('mongodb+srv://adminLyfeInter:admin@cluster0.3h0iime.mongodb.net/Lyfe_Inter?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -16,4 +16,4 @@ app.use(cors());
 app.use(express.json());
 app.use(EmployeeRoutes);
 
-app.listen(5000, () => console.log('Server up and running...'));
+app.listen(7000, () => console.log('Server up and running...'));

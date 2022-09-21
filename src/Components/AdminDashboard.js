@@ -3,10 +3,12 @@
 import { Dashboard } from "./Dashboard/Dashboard";
 import Sidebar from "./Sidebar/Sidebar";
 import { Route, Routes } from 'react-router-dom'
-import { EmployeeLists } from './EmployeeLists/Employees';
 import Clock from "react-live-clock";
 import { SidebarData } from "./Sidebar/SidebarData";
 import AddEmployee from "./EmployeeLists/AddEmployee";
+import EmployeeList from "./EmployeeNew/EmployeeList";
+import AddEmployees from "./EmployeeNew/AddEmployee";
+import EditEmployee from "./EmployeeNew/EditEmployee";
 
 
 
@@ -62,11 +64,14 @@ export default function AdminDashboard({ visibility }) {
 
                 <div>
                     <Routes>
-                        <Route path="/" exact element={<Dashboard />} />
+                        {/* <Route path="/" exact element={<Dashboard />} />
                         <Route path="/Dashboard" element={<Dashboard />} />
-                        <Route path="/Employees" element={<EmployeeLists />} />
-                        <Route path="/Employees/EmployeeLists" element={<EmployeeLists />} />
-                        <Route path="/Employees/AddEmployee" element={<AddEmployee />} />
+                        <Route path="/Employees" element={<EmployeeList />} />
+                        <Route path="/Employees/EmployeeLists" element={<EmployeeList />} />
+                        <Route path="/Employees/AddEmployee" element={<AddEmployee />} /> */}
+                        <Route path="/" element={<EmployeeList />} />
+                        <Route path="add" element={<AddEmployees />} />
+                        <Route path="edit/:id" element={<EditEmployee />} />
                     </Routes>
                 </div>
             </div>

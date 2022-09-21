@@ -4,6 +4,25 @@ export const getEmployee = async (req, res) => {
     try {
         const employee = await EmployeeModel.find();
         res.json(employee);
+        const pagination = req.body.pagination ? parseInt(req.body.pagination) : 10;
+        //PageNumber From which Page to Start 
+        const pageNumber = req.body.page ? parseInt(req.body.page) : 1;
+        EmployeeModel.find({})
+            //skip takes argument to skip number of entries 
+            .sort({ "id": 1 })
+            .skip((pageNumber - 1) * pagination)
+            //limit is number of Records we want to display
+            .limit(pagination)
+            .then(data => {
+                res.status(200).send({
+                    "users": data
+                })
+            })
+            .catch(err => {
+                res.status(400).send({
+                    "err": err
+                })
+            })
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -13,6 +32,21 @@ export const getEmployeeById = async (req, res) => {
     try {
         const employee = await EmployeeModel.findById(req.params.id);
         res.json(employee);
+        if (req.params.id) {
+            //Case For Counting Number OF Users
+            EmployeeModel.find({})
+                .count()
+                .then(data => {
+                    res.status(200).send({
+                        "cnt": data
+                    })
+                })
+                .catch(err => {
+                    res.status(400).send({
+                        "err": err
+                    })
+                })
+        }
     } catch (error) {
         res.status(404).json({ message: error.message });
     }

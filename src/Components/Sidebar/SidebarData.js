@@ -12,23 +12,23 @@ export const SidebarData = [
         title: 'Employee',
         titleOver: '/Employees/List Employee',
         color: 'bg-[#DB9936] text-white',
-        path: '/Employees',
+        path: '/Employee',
         Icon: Icons.user(),
         IconClosed: "",
         IconOpened: "",
         subNav: [
             {
                 title: 'List Employee',
-                titleOver: '/Employees/List Employee',
+                titleOver: '/Employee/List Employee',
                 color: 'bg-[#DB9936] text-white',
-                path: '/Employees/EmployeeLists',
+                path: '/Employee',
                 Icon: Icons.files(),
             },
             {
                 title: 'Add Employee',
-                titleOver: '/Employees/Add Employee',
+                titleOver: '/Employee/Add Employee',
                 color: 'bg-[#DB9936] text-white',
-                path: '/Employees/AddEmployee',
+                path: '/Employee/AddEmployee',
                 Icon: Icons.user(),
             }
         ],
