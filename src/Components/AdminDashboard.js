@@ -64,14 +64,16 @@ export default function AdminDashboard({ visibility }) {
 
                 <div>
                     <Routes>
-                        {/* <Route path="/" exact element={<Dashboard />} />
+                        <Route path="/" exact element={<Dashboard />} />
                         <Route path="/Dashboard" element={<Dashboard />} />
                         <Route path="/Employees" element={<EmployeeList />} />
                         <Route path="/Employees/EmployeeLists" element={<EmployeeList />} />
-                        <Route path="/Employees/AddEmployee" element={<AddEmployee />} /> */}
-                        <Route path="/" element={<EmployeeList />} />
+                        <Route path="/Employees/AddEmployee" element={<AddEmployees />} />
                         <Route path="add" element={<AddEmployees />} />
                         <Route path="edit/:id" element={<EditEmployee />} />
+                        {/* <Route path="/" element={<EmployeeList />} />
+                        <Route path="add" element={<AddEmployees />} />
+                        <Route path="edit/:id" element={<EditEmployee />} /> */}
                     </Routes>
                 </div>
             </div>
