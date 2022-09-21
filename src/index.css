@@ -30,3 +30,13 @@
     font-family: "Segoe UI";
     src: url("./Attachments/Fonts/SegoeUi/Segoe\ UI.woff") format("woff");
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

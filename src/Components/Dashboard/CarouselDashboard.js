@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Carousel, { CarouselItem } from "../Carousel/Carousel";
 import CircularBar from "../CircularBar/CircularBar";
-import AwardedEmployees from "../EmployeeLists/AwardedEmployees";
+import AwardedEmployees from "../EmployeeNew/AwardedEmployees";
 import Icons from "../Icons";
 export function CarouselDashboard({ visiblity }) {
     var listsLimit = 5;

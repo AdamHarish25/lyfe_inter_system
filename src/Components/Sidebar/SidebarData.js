@@ -28,7 +28,7 @@ export const SidebarData = [
                 title: 'Add Employee',
                 titleOver: '/Employee/Add Employee',
                 color: 'bg-[#DB9936] text-white',
-                path: '/Employee/AddEmployee',
+                path: '/Employee/AddorEditEmployee',
                 Icon: Icons.user(),
             }
         ],

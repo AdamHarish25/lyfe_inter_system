@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const EditEmployee = () => {
+const AddEmployees = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
@@ -11,23 +10,8 @@ const EditEmployee = () => {
     const [salary, setSalary] = useState("");
     const [position, setPosition] = useState("");
     const [division, setDivision] = useState("");
+    const [joinDate, setJoinDate] = useState("");
     const navigate = useNavigate();
-    const { id } = useParams();
-
-    useEffect(() => {
-        getUserById();
-    }, []);
-
-    const getUserById = async () => {
-        const response = await axios.get(`http://localhost:7000/Employees/${id}`);
-        setName(response.data.name);
-        setEmail(response.data.email);
-        setPhone(response.data.phone);
-        setStatus(response.data.status);
-        setSalary(response.data.salary);
-        setDivision(response.data.division);
-        setPosition(response.data.position);
-    };
 
     const className = {
         ONEinput: "border border-gray-400 rounded-lg px-6 py-3",
@@ -46,6 +30,8 @@ const EditEmployee = () => {
         button: "px-20 py-3 bg-[#DB9936] rounded-xl text-sm font-AzoSans text-white",
     }
 
+    const date = new Date();
+    const currentDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
     const inputPlaceholder = {
         name: "Name",
@@ -57,17 +43,18 @@ const EditEmployee = () => {
         phone: "Phone"
     };
 
-    const updateEmployee = async (e) => {
+    const saveEmployee = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:7000/Employees/${id}`, {
+            await axios.post("http://localhost:7000/Employees", {
                 name,
-                email,
                 phone,
+                email,
                 status,
                 salary,
+                position,
                 division,
-                position
+                joinDate
             });
             navigate("/Employee");
         } catch (error) {
@@ -84,10 +71,10 @@ const EditEmployee = () => {
     return (
         <div className={className.container}>
             <div className={className.titleContainer}>
-                <h1 className={className.title}>Edit Employee</h1>
+                <h1 className={className.title}>Add Employee</h1>
             </div>
 
-            <form className={className.form} onSubmit={updateEmployee}>
+            <form className={className.form} onSubmit={saveEmployee}>
                 <div className={className.inputContainer}>
                     <input
                         type={"text"}
@@ -154,7 +141,7 @@ const EditEmployee = () => {
                     <input className={className.ONEinput} type={"number"} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={inputPlaceholder.phone} />
                 </div>
                 <div className={className.buttonContainer}>
-                    <button type={"submit"} className={className.button}>
+                    <button type={"submit"} onClick={() => { setJoinDate(currentDate) }} className={className.button}>
                         Save
                     </button>
                 </div>
@@ -163,4 +150,4 @@ const EditEmployee = () => {
     );
 };
 
-export default EditEmployee;
+export default AddEmployees;
