@@ -69,7 +69,7 @@ const EditEmployee = () => {
                 division,
                 position
             });
-            navigate("/Employee");
+            navigate("/Employee/EmployeeLists");
         } catch (error) {
             if (error.response) {
                 console.log(error.response);

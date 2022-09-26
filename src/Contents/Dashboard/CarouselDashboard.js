@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Carousel, { CarouselItem } from "../Carousel/Carousel";
-import CircularBar from "../CircularBar/CircularBar";
+import Carousel, { CarouselItem } from "../Components/Carousel/Carousel";
+import CircularBar from "../Components/Carousel/Carousel";
 import AwardedEmployees from "../EmployeeNew/AwardedEmployees";
 import Icons from "../Icons";
 export function CarouselDashboard({ visiblity }) {

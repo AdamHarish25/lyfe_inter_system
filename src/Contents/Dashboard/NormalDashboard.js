@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import CircularBar from "../CircularBar/CircularBar"
+import CircularBar from "../Components/CircularBar/CircularBar"
 import AwardedEmployees from "../EmployeeNew/AwardedEmployees"
 import Icons from "../Icons"
 

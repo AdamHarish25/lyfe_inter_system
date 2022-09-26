@@ -1,4 +1,4 @@
-import '../Styles';
+import '../../Styles';
 
 
 const CircularBar = ({

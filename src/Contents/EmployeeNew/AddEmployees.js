@@ -56,7 +56,7 @@ const AddEmployees = () => {
                 division,
                 joinDate
             });
-            navigate("/Employee");
+            navigate("/Employee/EmployeeLists");
         } catch (error) {
             if (error.response) {
                 console.log(error.response);

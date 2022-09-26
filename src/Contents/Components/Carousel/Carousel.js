@@ -1,8 +1,8 @@
 /* eslint-disable eqeqeq */
 import { Children, cloneElement, useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import Icons from "../Icons";
-import '../Styles';
+import Icons from "../../Icons";
+import '../../Styles';
 
 export const CarouselItem = ({ children, className = "w-full h-full" }) => {
     return (

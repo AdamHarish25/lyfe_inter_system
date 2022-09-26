@@ -1,11 +1,13 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const SidebarMenu = ({ item, index }) => {
 
     const [subnav, setSubnav] = useState(false);
 
     const showSubnav = () => setSubnav(!subnav);
+
 
     var sideMenuStyle = "w-full h-auto px-5 py-3 rounded-lg text-gray-400 flex space-x-2 font-semibold hover:bg-[#DB9936] hover:text-white transform duration-200 hover:font-normal font-Poppins";
 

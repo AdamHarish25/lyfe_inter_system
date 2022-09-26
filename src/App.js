@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import AdminDashboard from "./Components/AdminDashboard";
-import Login from "./Components/Login";
-import ScreenWarn from "./Components/ScreenWarning";
+import AdminDashboard from "./Contents/AdminDashboard";
+import Login from "./Contents/Login";
+import ScreenWarn from "./Contents/ScreenWarning";
 
 
 function App() {
