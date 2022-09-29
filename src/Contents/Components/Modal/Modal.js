@@ -6,12 +6,12 @@ export const Modal = ({ modalTitle = "Delete Employee", modalMessage = "Are you 
 
     const className = {
         container: `${displayModal} w-full h-full relative overflow-hidden`,
-        modalContainer: "w-72 h-56 p-5 font-AzoSans bg-[#F5F5F5] rounded-xl space-y-10 absolute left-2/4 top-1/3 -translate-x-2/4 -translate-y-1/4",
+        modalContainer: "w-80 h-56 p-5 font-AzoSans bg-[#F5F5F5] rounded-xl space-y-10 absolute left-2/4 top-1/3 -translate-x-2/4 -translate-y-1/4",
         modalTitle: "w-full h-auto px-5 font-bold text-lg",
         modalMessage: "text-sm",
         modalButtonsContainer: "w-full flex justify-between",
-        cancelButton: "bg-[#DB9936] w-28 h-12 rounded-lg text-white",
-        actionButton: `${actionButtonColor} w-28 h-12 rounded-lg text-white`,
+        cancelButton: "bg-[#DB9936] w-32 h-12 rounded-lg text-white",
+        actionButton: `${actionButtonColor} w-32 h-12 rounded-lg text-white`,
     }
 
     return (

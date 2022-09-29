@@ -11,6 +11,7 @@ const AddEmployees = () => {
     const [position, setPosition] = useState("");
     const [division, setDivision] = useState("");
     const [joinDate, setJoinDate] = useState("");
+    const [employeeID, setEmployeeID] = useState(0);
     const navigate = useNavigate();
 
     const className = {
@@ -54,7 +55,8 @@ const AddEmployees = () => {
                 salary,
                 position,
                 division,
-                joinDate
+                joinDate,
+                employeeID,
             });
             navigate("/Employee/EmployeeLists");
         } catch (error) {
@@ -67,6 +69,11 @@ const AddEmployees = () => {
             }
         }
     };
+
+    const AddCurrentDateandIDs = () => {
+        setJoinDate(currentDate);
+        setEmployeeID(employeeID + 1);
+    }
 
     return (
         <div className={className.container}>
@@ -122,7 +129,7 @@ const AddEmployees = () => {
                             type={"text"}
                             className={className.inputSelect}
                             value={status}
-                            disabled={true}
+                            readOnly={true}
                             onChange={(e) => setStatus(e.target.value)}
                             placeholder={inputPlaceholder.status}
                         />
@@ -141,7 +148,7 @@ const AddEmployees = () => {
                     <input className={className.ONEinput} type={"number"} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={inputPlaceholder.phone} />
                 </div>
                 <div className={className.buttonContainer}>
-                    <button type={"submit"} onClick={() => { setJoinDate(currentDate) }} className={className.button}>
+                    <button type={"submit"} onClick={AddCurrentDateandIDs} className={className.button}>
                         Save
                     </button>
                 </div>

@@ -4,7 +4,7 @@ import cors from "cors";
 import EmployeeRoutes from "./routes/EmployeeRoutes.js";
 
 const app = express();
-mongoose.connect('mongodb+srv://adminLyfeInter:admin@cluster0.3h0iime.mongodb.net/Lyfe_Inter?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017/Lyfe', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

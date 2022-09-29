@@ -2,6 +2,7 @@ import { Dashboard } from "../Dashboard/Dashboard";
 import AddEmployees from "../EmployeeNew/AddEmployees";
 import EditEmployee from "../EmployeeNew/EditEmployee";
 import EmployeeList from "../EmployeeNew/EmployeeList";
+import { ModalDelete } from "../EmployeeNew/ModalDelete";
 
 export const locationRoutes = [
     {
@@ -22,6 +23,11 @@ export const locationRoutes = [
     {
         path: "/Employee/EmployeeLists/AddorEditEmployee/:id",
         element: <EditEmployee />,
+        exact: false,
+    },
+    {
+        path: "/Employee/EmployeeLists/DeleteEmployee/:id",
+        element: <ModalDelete />,
         exact: false,
     },
 ];

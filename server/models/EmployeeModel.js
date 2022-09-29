@@ -33,6 +33,10 @@ const Employee = new mongoose.Schema({
         type: String,
         required: true
     },
+    employeeID: {
+        type: Number,
+        required: false,
+    }
 });
 
 export default mongoose.model('Employee', Employee);

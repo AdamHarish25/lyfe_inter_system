@@ -135,7 +135,7 @@ const EditEmployee = () => {
                             type={"text"}
                             className={className.inputSelect}
                             value={status}
-                            disabled={true}
+                            readOnly={true}
                             onChange={(e) => setStatus(e.target.value)}
                             placeholder={inputPlaceholder.status}
                         />
