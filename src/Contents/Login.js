@@ -55,7 +55,7 @@ export default function Login({ visibility }) {
                     </button> */}
 
 
-                        <Link to="/home" className="w-64 h-11 grid place-items-center rounded-2xl bg-[#6b5747cc] text-sm text-white font-Poppins shadow-lg shadow-transparent hover:shadow-[#00000040]/[.25] transform duration-200">
+                        <Link to="/" className="w-64 h-11 grid place-items-center rounded-2xl bg-[#6b5747cc] text-sm text-white font-Poppins shadow-lg shadow-transparent hover:shadow-[#00000040]/[.25] transform duration-200">
                             Log in
                         </Link>
                     </form>
@@ -63,7 +63,7 @@ export default function Login({ visibility }) {
             </div >
             <div className="w-full h-auto lg:h-screen bg-LivingRoom bg-cover bg-center hidden lg:block" />
             <Routes>
-                <Route path="/home" component={AdminDashboard} />
+                <Route path="/" element={<AdminDashboard />} />
             </Routes>
         </div >
     );

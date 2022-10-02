@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -11,15 +11,14 @@ const AddEmployees = () => {
     const [position, setPosition] = useState("");
     const [division, setDivision] = useState("");
     const [joinDate, setJoinDate] = useState("");
-    const [employeeID, setEmployeeID] = useState(0);
     const navigate = useNavigate();
 
     const className = {
         ONEinput: "border border-gray-400 rounded-lg px-6 py-3",
-        inputSelect: "border border-gray-400 rounded-lg py-3 px-6",
+        inputSelect: "border border-gray-400 rounded-lg bg-transparent py-3 px-6",
         input: "border border-gray-400 rounded-lg py-3 px-6",
-        selectContainer: "h-auto w-auto group",
-        selectableOptions: "px-6 shadow-lg rounded-lg py-5 space-y-2 hidden group-hover:block",
+        selectContainer: "h-auto w-auto group relative",
+        selectableOptions: "px-6 absolute inset-x-0 h-auto bg-white shadow-lg rounded-lg py-5 space-y-2 hidden group-hover:block",
         Options: "cursor-pointer px-4 py-2 hover:bg-[#be9b80] hover:text-white rounded-xl transform duration-200",
         container: "w-full h-auto p-5 rounded-xl border border-gray-500",
         inputContainer: "flex justify-center space-x-20",
@@ -56,7 +55,6 @@ const AddEmployees = () => {
                 position,
                 division,
                 joinDate,
-                employeeID,
             });
             navigate("/Employee/EmployeeLists");
         } catch (error) {
@@ -69,11 +67,6 @@ const AddEmployees = () => {
             }
         }
     };
-
-    const AddCurrentDateandIDs = () => {
-        setJoinDate(currentDate);
-        setEmployeeID(employeeID + 1);
-    }
 
     return (
         <div className={className.container}>
@@ -129,7 +122,7 @@ const AddEmployees = () => {
                             type={"text"}
                             className={className.inputSelect}
                             value={status}
-                            readOnly={true}
+                            disabled={true}
                             onChange={(e) => setStatus(e.target.value)}
                             placeholder={inputPlaceholder.status}
                         />
@@ -148,7 +141,7 @@ const AddEmployees = () => {
                     <input className={className.ONEinput} type={"number"} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={inputPlaceholder.phone} />
                 </div>
                 <div className={className.buttonContainer}>
-                    <button type={"submit"} onClick={AddCurrentDateandIDs} className={className.button}>
+                    <button type={"submit"} onClick={() => setJoinDate(currentDate)} className={className.button}>
                         Save
                     </button>
                 </div>

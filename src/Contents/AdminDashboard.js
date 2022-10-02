@@ -24,8 +24,8 @@ export default function AdminDashboard({ visibility }) {
         innerContainerStyle = "";
     } else if (pathName === "/Employee/EmployeeLists") {
         title = "/Employees/ListEmployee"
-        containerHeight = "h-screenXL"
-        innerContainerStyle = "flex justify-center items-center";
+        containerHeight = "h-[165vh]"
+        innerContainerStyle = "flex justify-center items-start";
     } else if (pathName === "/Employee/AddorEditEmployee") {
         title = "/Employees/AddNewEmployee"
         containerHeight = "h-screenXL"
@@ -47,7 +47,6 @@ export default function AdminDashboard({ visibility }) {
     const className = {
         container: `${visibility} ${containerHeight} w-auto xl:h-screenXL overflow-y-hidden py-5 pr-5 bg-[#f5e4d7] grid-cols-SL gap-5`,
         compContainer: "w-full h-auto bg-white rounded-2xl p-10 font-AzoSans",
-
         headerContainer: "w-full h-auto flex justify-between items-center mb-5",
         titleContainer: "h-full text-start w-72 space-y-1",
         title: "font-Poppins text-lg",
@@ -127,7 +126,7 @@ export default function AdminDashboard({ visibility }) {
                 <div className={className.routesContainer}>
                     <Routes>
                         {locationRoutes.map((routes, index) => {
-                            return <Route key={index} path={routes.path} element={routes.element} exact={routes.exact} />
+                            return <Route key={index} path={routes.path} element={routes.element} />
                         })}
                     </Routes>
                 </div>
